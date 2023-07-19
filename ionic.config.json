@@ -1,0 +1,7 @@
+{
+  "name": "xtrades-test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
