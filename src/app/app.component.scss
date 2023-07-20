@@ -1,0 +1,88 @@
+* {
+  font-family: Poppins, serif;
+}
+
+a {
+  color: #FFF;
+  font-family: Poppins, serif;
+  text-decoration: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  color: #04E08A;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  padding: 21px;
+}
+
+.logo {
+  width: 84.883px;
+  height: 24px;
+}
+
+.logo-container {
+  padding-top: 16px;
+}
+
+ion-menu::part(container) {
+  width: 77%;
+}
+
+ion-menu::part(backdrop) {
+  background: linear-gradient(180deg, rgba(1, 13, 26, 0.80) 40.38%, rgba(2, 16, 31, 0.20) 100%);
+  backdrop-filter: blur(5px);
+}
+
+ion-item::part(native) {
+  padding-inline-start: 0;
+}
+
+ion-nav-link {
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+ion-buttons.footer-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.top-buttons{
+  padding: 51px 12px 0 12px;
+}
+.arrow {
+  height: 14px;
+  width: 8px;
+}
+.btn{
+  width: 239px;
+  height: 49px;
+}
+
+.outline-green-btn span, .green-btn span {
+  height: 47px;
+  width: 237px;
+}
+
+.opacity-05 {
+  opacity: 0.5;
+}
+
+.footer-links {
+  display: flex;
+  gap: 8px;
+  width: 253px;
+  margin: 20px auto 13px auto;
+  line-height: 22px;
+}

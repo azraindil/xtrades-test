@@ -1,3 +1,57 @@
 <ion-app>
+  <ion-header [translucent]="true" id="main-content" class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons class="top-buttons">
+        <ion-menu-button slot="start">
+          <ion-icon src="../../assets/icon/menu.svg">
+          </ion-icon>
+        </ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+<ion-menu side="start" contentId="main-content" class="ion-padding">
+  <ion-header class="ion-no-border ion-padding">
+    <ion-toolbar class="logo-container">
+      <ion-icon class="logo" src="../../assets/icon/logo.svg">
+      </ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list lines="none">
+      <ion-item>
+        <a routerLink="/home">Home
+        </a>
+      </ion-item>
+      <ion-item>
+        <a routerLink="/career">Career
+        </a>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer class="ion-padding">
+    <ion-toolbar>
+      <ion-buttons class="footer-btns">
+        <ion-button class="btn outline-green-btn" (mouseenter)="hoverG = true" (mouseleave)="hoverG = false">
+            <span>
+              <p>MEMBERSHIP</p>
+            <ion-icon [src]="hoverG? iconSrcB : iconSrcG" class="arrow">
+            </ion-icon>
+            </span>
+        </ion-button>
+        <ion-button class="btn green-btn" (mouseenter)="hoverB = true" (mouseleave)="hoverB = false">
+          <span>
+            <p>LOGIN</p>
+            <ion-icon [src]="hoverB? iconSrcG : iconSrcB" class="arrow">
+            </ion-icon>
+          </span>
+        </ion-button>
+      </ion-buttons>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a><a href="#">Refund Policy</a><a href="#">Terms & Conditions</a>
+      </div>
+      <p class="copyright opacity-05">© Copyright 2022 - Xtrades. All rights reserved.</p>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
