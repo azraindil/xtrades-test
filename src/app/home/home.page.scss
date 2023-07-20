@@ -1,27 +1,39 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.mr-10 {
+  margin-right: 10px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.logo {
+  margin-bottom: 64px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.dots-background {
+  --background: url('../../assets/background/dots.svg') repeat 100% 100%, url('../../assets/background/Vector(3).png') 50% 26%/70% no-repeat;
 }
 
-#container a {
-  text-decoration: none;
+.container {
+  height: 100%;
+  width: 100%;
+  gap: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn {
+  width: 250px;
+  height: 48px;
+  color: #FFF;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-blue {
+  --background: #5865F2;
+}
+
+.btn-gray {
+  --background: #303236;
 }

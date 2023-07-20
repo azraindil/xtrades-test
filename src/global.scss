@@ -24,3 +24,71 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+.btn {
+  font-family: Poppins, serif;
+  text-align: center;
+  --border-radius: 13px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.green-btn {
+  background: linear-gradient(152deg, #81EDB9 0%, #C2F0ED 100%);
+  color: #103366;
+  border-radius: 13px;
+  transition: background .5s ease;
+}
+
+.green-btn span:hover {
+  color: #04E08A;
+  transition: all 0.5s ease;
+  background: #103366;
+}
+
+.outline-green-btn {
+  background-image: linear-gradient(190deg, #04E08A 0%, #05CEF2 100%);
+  box-sizing: border-box;
+  color: #04E08A;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  z-index: 2;
+  margin: 0;
+  padding: 1px;
+  border-radius: 13px;
+}
+
+.outline-green-btn span, .green-btn span {
+  align-items: center;
+  border-radius: 13px;
+  display: flex;
+  justify-content: space-between;
+  transition: background .5s ease;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding: 0 15px;
+}
+
+.outline-green-btn span {
+  background: #050505;
+}
+
+.outline-green-btn span:hover {
+  background: transparent;
+  color: #103366;
+}
+
+.copyright, .footer-links a {
+  text-align: center;
+  font-family: Poppins, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
