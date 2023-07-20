@@ -25,6 +25,20 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+* {
+  font-family: Poppins, serif;
+}
+
+a {
+  color: #FFF;
+  font-family: Poppins, serif;
+  text-decoration: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.5s ease;
+}
 
 .btn {
   font-family: Poppins, serif;
@@ -91,4 +105,8 @@
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
+}
+
+.opacity-05 {
+  opacity: 0.5;
 }

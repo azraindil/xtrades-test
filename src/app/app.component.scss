@@ -1,18 +1,3 @@
-* {
-  font-family: Poppins, serif;
-}
-
-a {
-  color: #FFF;
-  font-family: Poppins, serif;
-  text-decoration: none;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  transition: all 0.5s ease;
-}
-
 a:hover {
   color: #04E08A;
 }
@@ -73,10 +58,6 @@ ion-buttons.footer-btns {
 .outline-green-btn span, .green-btn span {
   height: 47px;
   width: 237px;
-}
-
-.opacity-05 {
-  opacity: 0.5;
 }
 
 .footer-links {
