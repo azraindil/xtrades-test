@@ -40,6 +40,17 @@ a {
   transition: all 0.5s ease;
 }
 
+a:hover {
+  color: #04E08A;
+}
+.text-center{
+  text-align: center;
+}
+.mv-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .btn {
   font-family: Poppins, serif;
   text-align: center;
@@ -98,7 +109,7 @@ a {
   color: #103366;
 }
 
-.copyright, .footer-links a {
+.copyright, .footer-menu-links a {
   text-align: center;
   font-family: Poppins, serif;
   font-size: 10px;

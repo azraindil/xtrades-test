@@ -29,7 +29,13 @@
   display: flex;
   justify-content: space-between;
 }
-
+@media(min-width: 568px){
+  .btn{
+    width: 280px;
+    height: 48px;
+    --border-radius: 6px;
+  }
+}
 .btn-blue {
   --background: #5865F2;
 }
