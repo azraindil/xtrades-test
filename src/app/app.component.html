@@ -1,3 +1,88 @@
 <ion-app>
+  <ion-menu *ngIf="!isDesktop" side="start" contentId="main-content" class="ion-padding">
+    <ion-header class="ion-no-border ion-padding">
+      <ion-toolbar class="logo-container">
+        <ion-icon class="logo" src="../../assets/icon/logo.svg">
+        </ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list lines="none">
+        <ion-item>
+          <a routerLink="/home">Home
+          </a>
+        </ion-item>
+        <ion-item>
+          <a routerLink="/career">Career
+          </a>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+    <ion-footer class="ion-padding">
+      <ion-toolbar>
+        <ion-buttons class="footer-btns">
+          <ion-button class="btn outline-green-btn" (mouseenter)="hoverG = true" (mouseleave)="hoverG = false">
+            <span>
+              <p>MEMBERSHIP</p>
+            <ion-icon [src]="hoverG? iconSrcB : iconSrcG" class="arrow">
+            </ion-icon>
+            </span>
+          </ion-button>
+          <ion-button class="btn green-btn" (mouseenter)="hoverB = true" (mouseleave)="hoverB = false">
+          <span>
+            <p>LOGIN</p>
+            <ion-icon [src]="hoverB? iconSrcG : iconSrcB" class="arrow">
+            </ion-icon>
+          </span>
+          </ion-button>
+        </ion-buttons>
+        <div class="footer-menu-links">
+          <a href="#">Privacy Policy</a><a href="#">Refund Policy</a><a href="#">Terms & Conditions</a>
+        </div>
+        <p class="copyright opacity-05">© Copyright 2022 - Xtrades. All rights reserved.</p>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+
+  <ion-header [translucent]="true" id="main-content" class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons *ngIf="!isDesktop" class="top-buttons">
+        <ion-menu-button slot="start">
+          <ion-icon src="../../assets/icon/menu.svg">
+          </ion-icon>
+        </ion-menu-button>
+      </ion-buttons>
+      <ion-row *ngIf="isDesktop" class="ion-align-items-center top-menu">
+        <ion-col size="1">
+          <img src="./assets/icon/Group7575.svg" class="logo ion-text-left">
+        </ion-col>
+        <ion-col size="4">
+          <div class="ion-text-center navbar">
+            <ion-button fill="clear" routerLink="/home">
+              home
+            </ion-button>
+            <ion-button fill="clear" routerLink="/career">
+              career
+            </ion-button>
+          </div>
+
+        </ion-col>
+        <ion-col size="7">
+          <ion-buttons class="top-menu-btns">
+            <ion-button class="btn outline-green-btn">
+            <span>
+              MEMBERSHIP
+            </span>
+            </ion-button>
+            <ion-button class="btn green-btn">
+          <span>
+            LOGIN
+          </span>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-header>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>

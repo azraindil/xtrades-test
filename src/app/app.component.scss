@@ -1,0 +1,116 @@
+
+.container {
+  height: 100vh;
+  width: 100%;
+  padding: 21px;
+}
+
+.logo {
+  width: 84.883px;
+  height: 24px;
+}
+
+.logo-container {
+  padding-top: 16px;
+}
+
+// ----------- mobile -----------
+
+ion-menu::part(container) {
+  width: 77%;
+}
+
+ion-menu::part(backdrop) {
+  background: linear-gradient(180deg, rgba(1, 13, 26, 0.80) 40.38%, rgba(2, 16, 31, 0.20) 100%);
+  backdrop-filter: blur(5px);
+}
+
+ion-item::part(native) {
+  padding-inline-start: 0;
+}
+
+ion-buttons.footer-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.top-buttons {
+  padding: 51px 12px 0 12px;
+}
+
+.arrow {
+  height: 14px;
+  width: 8px;
+}
+
+@media(max-width: 568px) {
+  .btn {
+    width: 239px;
+    height: 49px;
+  }
+
+  .outline-green-btn span, .green-btn span {
+    height: 47px;
+    width: 237px;
+  }
+}
+
+.footer-menu-links {
+  display: flex;
+  gap: 8px;
+  width: 253px;
+  margin: 20px auto 13px auto;
+  line-height: 22px;
+}
+
+// ----------- desktop -----------
+
+@media(min-width: 568px) {
+
+  .btn {
+    --border-radius: 8px;
+  }
+  .outline-green-btn {
+    height: 36px;
+    width: 117px;
+  }
+
+  .green-btn {
+    height: 36px;
+    width: 73px;
+  }
+
+  .outline-green-btn span {
+    height: 34px;
+    width: 115px;
+    margin: 0 auto;
+    padding: 0 7px;
+  }
+
+  .green-btn span {
+    height: 34px;
+    width: 71px;
+  }
+  .top-menu {
+    height: 88px;
+    padding: 0 24px;
+  }
+  .top-menu-btns {
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+
+  }
+  .navbar ion-button {
+    --color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -1px;
+  }
+}

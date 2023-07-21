@@ -1,0 +1,199 @@
+<!-- ********** MOBILE VIEW ********** -->
+
+<ion-content *ngIf="!isDesktop" [fullscreen]="true">
+  <div class="container">
+    <h1>We’re Hiring</h1>
+    <ion-accordion-group>
+      <ion-accordion class="mb-5" value="first">
+        <ion-item slot="header" color="gray">
+          <ion-label class="label-accordion">Film Editor and Creator for Trading Content</ion-label>
+        </ion-item>
+        <div class="accordion-content" slot="content">
+          <div class="divider"></div>
+          <h2>Hiring a Film Editor and<br>
+            Creator for Trading Content</h2>
+          <p>
+            We're looking to increase our exposure on social
+            media, by creating more content (specifically
+            Youtube Videos + shorts and Reels on Instagram)
+          </p>
+          <ul>
+            <li>You will be provided with Living rent free with
+              me (Either in Los Angeles or New York, open
+              to be discussed)
+            </li>
+            <li>Compensation is negotiable (DM to discuss)</li>
+            <li>Become a Partner</li>
+          </ul>
+          <h3>
+            Skills Needed (Most to Least Important)
+          </h3>
+          <ul>
+            <li>Short Form Video Editing</li>
+            <li>Lighting and Content Creation Setting
+              Management
+            </li>
+            <li>Videography</li>
+            <li>Photography</li>
+            <li>Longform Video Editing</li>
+          </ul>
+          <div class="divider"></div>
+          <p class="contact-text">Contact us at <a href="mailto:kevin@xtrades.net">kevin@xtrades.net</a> and include
+            information
+            about your previous works and experience<br>
+            to set up an interview.</p>
+          <ion-button class="btn green-btn">
+            <span>
+              contact us now
+            </span>
+          </ion-button>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+    <ion-accordion-group>
+      <ion-accordion class="mb-5" value="second">
+        <ion-item slot="header" color="gray">
+          <ion-label class="label-accordion">Full Stack Principal Software Developer</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Second Content</div>
+      </ion-accordion>
+    </ion-accordion-group>
+    <ion-accordion-group>
+      <ion-accordion class="mb-5" value="third">
+        <ion-item slot="header" color="gray">
+          <ion-label class="label-accordion">Sr Principal Software Engineer<br>
+            - C++Programmer
+          </ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Third Content</div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </div>
+</ion-content>
+
+<!-- ********** DESKTOP VIEW ********** -->
+
+<ion-content *ngIf="isDesktop">
+  <div class="container">
+    <h1>We’re Hiring</h1>
+    <ion-row>
+      <ion-col size="3">
+        <div class="divider"></div>
+        <div class="mv-20">
+          <button (click)="changeCard(0)" [ngClass]="activeCard == 0 ? '' : 'opacity-05'" class="card-menu-btn">Film
+            Editor and Creator for<br>
+            Trading Content
+          </button>
+        </div>
+        <div class="divider"></div>
+        <div class="mv-20">
+          <button (click)="changeCard(1)" [ngClass]="activeCard == 1 ? '' : 'opacity-05'" class="card-menu-btn">Full
+            Stack Principal Software<br>
+            Developer
+          </button>
+        </div>
+        <div class="divider"></div>
+        <div class="mv-20">
+          <button (click)="changeCard(2)" [ngClass]="activeCard == 2 ? '' : 'opacity-05'" class="card-menu-btn">Sr
+            Principal Software Engineer -<br>
+            C++ Programmer
+          </button>
+        </div>
+      </ion-col>
+      <ion-col size="9">
+        <ion-card class="card" *ngFor="let card of cards">
+          <img src="../../assets/background/Frame20975.png"/>
+          <div class="card-content">
+            <ion-card-header>
+              <ion-card-title>{{card.title}}
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>{{card.content}}
+              </p>
+              <ul *ngIf="card.list">
+                <li *ngFor="let el of card.list">{{el}}
+                </li>
+              </ul>
+              <h3>{{card.subtitle ? card.subtitle : ""}}
+              </h3>
+              <ul *ngIf="card.secondList">
+                <li *ngFor="let el of card.secondList">{{el}}
+                </li>
+              </ul>
+              <div style="flex-grow: 1"></div>
+              <div class="divider"></div>
+              <div class="card-footer">
+                <p class="contact-text">Contact us at <a href="mailto:kevin@xtrades.net">kevin@xtrades.net</a> and
+                  include
+                  information
+                  about your previous works and experience
+                  to set up an interview.</p>
+                <ion-button class="btn green-btn">
+                  <span>
+                    contact us now
+                  </span>
+                </ion-button>
+              </div>
+            </ion-card-content>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <ion-row>
+        <ion-col size="10">
+          <ion-row class="footer-links">
+            <div>
+              <p>
+                Billing & General Support<br>
+                <a href="mailto:hello@xtrades.net">hello@xtrades.net</a>
+              </p>
+            </div>
+            <div>
+              <p>
+                Los Angeles, CA 90028<br>
+                <a href="tel:1-530-723-5499">1-530-723-5499</a>
+              </p>
+            </div>
+            <div>
+              <p class="text-center">
+                <a href="#">
+                  Terms & Conditions
+                </a>
+              </p>
+            </div>
+            <div>
+              <p class="text-center">
+                <a href="#">
+                  Refund Policy
+                </a>
+              </p>
+            </div>
+            <div>
+              <p class="text-center">
+                <a href="#">
+                  Privacy Policy
+                </a>
+              </p>
+            </div>
+          </ion-row>
+          <ion-row>
+            <p class="copyright">© Copyright 2022 - Xtrades. All rights reserved.</p>
+          </ion-row>
+        </ion-col>
+        <ion-col size="2" style="display: flex; justify-content: flex-end; align-items: flex-end;">
+            <div class="footer-icons">
+              <ion-icon src="../../assets/icon/fb.svg"></ion-icon>
+              <ion-icon src="../../assets/icon/twt.svg"></ion-icon>
+              <ion-icon src="../../assets/icon/ig.svg"></ion-icon>
+              <ion-icon src="../../assets/icon/linkedin.svg"></ion-icon>
+            </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
